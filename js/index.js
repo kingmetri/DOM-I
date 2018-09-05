@@ -8,7 +8,7 @@ const siteContent = {
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
-  "cta": {
+ "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
@@ -40,3 +40,28 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Grabbing Elements
+// Did I grab enough
+
+let codeSnip = document.getElementById('cta-img');
+let middleImg = document.getElementById('middle-img');
+let header = document.getElementsByTagName('header');
+let cta = document.getElementsByClassName('cta'); //DOM is Awesome
+let mainContent = document.getElementsByClassName('main-content');
+
+//Adding Images to HTML 
+//referenced from https://www.w3schools.com/jsref/prop_img_src.asp
+codeSnip.src = "img\header-img.png";
+middleImg.src = "DOM-I\img\mid-page-accent.jpg";
+logo.src = "DOM-I\img\logo.png";
+
+//Adding Content to HTML
+
+
+
+
+
+
+
+
