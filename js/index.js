@@ -39,24 +39,39 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 //Grabbing Elements
 // Did I grab enough
 
 let codeSnip = document.getElementById('cta-img');
 let middleImg = document.getElementById('middle-img');
-let header = document.getElementsByTagName('header');
+const nav = document.createElement("nav");
+let navItems = document.querySelectorAll('nav a');
 let cta = document.getElementsByClassName('cta'); //DOM is Awesome
 let mainContent = document.getElementsByClassName('main-content');
+let navTag = document.createElement('a');
+let domIsA = document.querySelector('.cta-text h1');
+let button = document.querySelector('.cta-text button');
 
 //Adding Images to HTML 
 //referenced from https://www.w3schools.com/jsref/prop_img_src.asp
-codeSnip.src = "img\header-img.png";
-middleImg.src = "DOM-I\img\mid-page-accent.jpg";
-logo.src = "DOM-I\img\logo.png";
+
+codeSnip.src = siteContent["cta"]["img-src"];
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+domIsA.innerHTML = "DOM IS AWESOME!";
+button.innerHTML = "Get Started ";
+
+
 
 //Adding Content to HTML
+
+
+//NAV
+for(let i = 0; i < navItems.length; i++){
+  navItems[i].innerHTML =  siteContent["nav"]["nav-item-" + (i + 1)];
+}
+
 
 
 
